@@ -1,0 +1,26 @@
+{
+  "name": "nuxt-server",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server --exec babel-node",
+    "build": "nuxt build && babel server -d build",
+    "start": "cross-env NODE_ENV=production node build/index.js"
+  },
+  "dependencies": {
+    "glob": "^7.1.4",
+    "koa": "^2.8.1",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.15",
+    "nuxt": "^2.9.2",
+    "ramda": "^0.26.1",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/node": "^7.6.3",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "cross-env": "^5.2.1",
+    "nodemon": "^1.19.2"
+  }
+}
